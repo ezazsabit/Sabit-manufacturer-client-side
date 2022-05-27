@@ -1,0 +1,16 @@
+.footer {
+    background-color:  rgb(131, 96, 30);
+    color: aliceblue;
+    position: sticky;
+    bottom: 0px;
+    padding: 30px;
+    bottom: 0;
+    width: 100%;
+    /* Height of the footer*/
+    height: 40px;
+    padding-bottom: 50px;
+    
+    
+    
+
+}
