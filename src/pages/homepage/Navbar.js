@@ -52,7 +52,7 @@ const Navbar = () => {
       <li> <Link to='/home' className='text-decoration-none text-dark d-flex align-items-center px-2 mx-auto'>Home</Link></li>
       {
            user? <div className='flex nAv'>
-           <li><p className='logOut my-auto text-danger signout' onClick={logout}>Log-Out:{user?.displayName}</p></li>
+           <li><p className='logOut my-auto text-primary signout' onClick={logout}>Log-Out:{user?.displayName || user?.email}</p></li>
            <li><Link to='/manageitems' className='text-decoration-none text-dark d-flex align-items-center px-2 mx-auto'>Manage-Items</Link></li>
            <li><Link to='/additems' className='text-decoration-none text-dark d-flex align-items-center px-2 mx-auto'>Add-Items</Link></li>
            <li><Link to='/myitems' className='text-decoration-none text-dark d-flex align-items-center px-2 mx-auto'>My-Items</Link></li>

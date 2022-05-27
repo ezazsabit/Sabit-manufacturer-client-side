@@ -8,6 +8,7 @@ import Error from './shared components/Error';
 import Footer from './shared components/Footer';
 import Signup from '../src/Authentication/Signup'
 import Login from './Authentication/Login';
+import RequireAuth from './shared components/RequireAuth';
 
 function App() {
   return (
@@ -17,9 +18,10 @@ function App() {
      <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
         <Route path="/*" element={<Error />} />
-        <Route path="/purchase" element={<Purchace />} />
+        
         <Route path="/register" element={<Signup />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/purchase" element={<RequireAuth><Purchace /></RequireAuth>} />
      </Routes>
       <Footer></Footer>
      
