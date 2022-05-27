@@ -8,7 +8,7 @@ const Achievement = () => {
     return (
 <div>
   
-<p className='mt-5 text-6xl text-secondary'>Our Achievement!!</p>
+<p className='mt-5 text-6xl text-secondary'>Our Achievement</p>
         <div className='App w-4/5 mt-14  grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-x-5 mx-auto'>
        
             <Card style={{ width: '18rem' }}>

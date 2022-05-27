@@ -6,10 +6,11 @@ import Summery from './Summery';
 import Tools from './Tools';
 import Connection from '../../ExtraItem/Connection/Connection'
 import Achievement from '../../ExtraItem/Achievement/Achievement';
+import './Home.css'
 
 const Home = () => {
     return (
-        <div>
+        <div className='homeMain'>
            
            
             <Banner></Banner>
