@@ -21,6 +21,7 @@ function App() {
         
         <Route path="/register" element={<Signup />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/purchase/:id" element={<RequireAuth><Purchace /></RequireAuth>} />
         <Route path="/purchase" element={<RequireAuth><Purchace /></RequireAuth>} />
      </Routes>
       <Footer></Footer>
