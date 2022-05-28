@@ -88,14 +88,14 @@ const Purchace = () => {
                 <Form.Group className="mb-3" controlId="formBasicPassword">
                     <Form.Label>Quantity for purchase</Form.Label>
                     {/* <Form.Control value={data.MinimumOrderQuantity} onBlur={handleQuantity()} type="number" placeholder="Quantity" /> */}
-                    <input defaultValue={data.MinimumOrderQuantity} onBlur={handleQuantity}  type="number" id="fname" name="fname" />
+                    <input defaultValue={data.MinimumOrderQuantity} onKeyUp={handleQuantity}  type="number" id="fname" name="fname" />
                 </Form.Group>
                
                 {errorHandle}
                 
 
                
-                <Button variant="primary" type="submit">
+                <Button disabled={error===true} variant="primary" type="submit">
                     Submit
                 </Button>
             </Form>
