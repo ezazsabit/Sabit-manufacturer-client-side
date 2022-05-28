@@ -18,7 +18,7 @@ const Myorder = () => {
 
     // eslint-disable-next-line react-hooks/rules-of-hooks
     useEffect(() => {
-        fetch(`http://localhost:5000/ordereditem/${user?.email}`)
+        fetch(`https://intense-brook-81804.herokuapp.com/ordereditem/${user?.email}`)
             .then((res) => res.json())
             .then((data) => setData(data));
     }, [data,user]);
@@ -29,7 +29,7 @@ const Myorder = () => {
     console.log(id);
     const _id= {id};
     if (window.confirm("Are you sure?!")) {
-      fetch(`http://localhost:5000/ordereditem/${id}`, {
+      fetch(`https://intense-brook-81804.herokuapp.com/ordereditem/${id}`, {
         method: 'DELETE',
         headers: {
             'Content-Type': 'application/json',

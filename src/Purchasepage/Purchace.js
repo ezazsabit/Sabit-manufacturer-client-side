@@ -12,7 +12,7 @@ const Purchace = () => {
     const [data, setData] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/tools/${id}`)
+        fetch(`https://intense-brook-81804.herokuapp.com/tools/${id}`)
             .then((res) => res.json())
             .then((data) => setData(data));
     }, [id, data]);
@@ -67,7 +67,7 @@ const Purchace = () => {
         const order = {email,item,address,phone,quantity}
         console.log(order);
         //--------------------database
-        fetch('http://localhost:5000/ordereditem', {
+        fetch('https://intense-brook-81804.herokuapp.com/ordereditem', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

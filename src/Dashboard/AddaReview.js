@@ -22,7 +22,7 @@ const AddaReview = () => {
         const reviewData = {ratings,review,email}
        
         //--------------------database
-        fetch('http://localhost:5000/review', {
+        fetch('https://intense-brook-81804.herokuapp.com/review', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
