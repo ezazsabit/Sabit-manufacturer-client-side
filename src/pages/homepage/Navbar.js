@@ -23,7 +23,7 @@ const Navbar = () => {
       <input type="checkbox" id="drop" class="modal-toggle" />
      
       <ul tabindex="0" className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
-      <label for="drop" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
+      {/* <label for="drop" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label> */}
         <li> <Link to='/home' className='text-decoration-none text-dark d-flex align-items-center px-2 mx-auto'>Home</Link></li>
         {/* <li tabindex="0">
           <a className="justify-between">
@@ -34,9 +34,7 @@ const Navbar = () => {
          {
            user? <div >
            <li><p className='logOut my-auto text-danger signout d-flex align-items-center px-2 mx-auto' onClick={logout}>Log-out:{user?.displayName || user?.email} </p></li>
-           <li><Link to='/manageitems' className='text-decoration-none text-dark d-flex align-items-center px-2 mx-auto'>Manage-Items</Link></li>
-           <li><Link to='/additems' className='text-decoration-none text-dark d-flex align-items-center px-2 mx-auto'>Add-Items</Link></li>
-           <li><Link to='/myitems' className='text-decoration-none text-dark d-flex align-items-center px-2 mx-auto'>My-Items</Link></li>
+           <li><Link to='/dashboard' className='text-decoration-none text-dark d-flex align-items-center px-2 mx-auto'>Dash-Board</Link></li>
          </div>:<li><Link to='/login' className='text-decoration-none text-dark d-flex align-items-center px-2 mx-auto'>Sign-In</Link></li>
         
          }
@@ -51,11 +49,11 @@ const Navbar = () => {
     <ul className="menu menu-horizontal p-0">
       <li> <Link to='/home' className='text-decoration-none text-dark d-flex align-items-center px-2 mx-auto'>Home</Link></li>
       {
-           user? <div className='flex nAv'>
+           user? <div className='flex '>
            <li><p className='logOut my-auto text-primary signout' onClick={logout}>Log-Out:{user?.displayName || user?.email}</p></li>
-           <li><Link to='/manageitems' className='text-decoration-none text-dark d-flex align-items-center px-2 mx-auto'>Manage-Items</Link></li>
-           <li><Link to='/additems' className='text-decoration-none text-dark d-flex align-items-center px-2 mx-auto'>Add-Items</Link></li>
-           <li><Link to='/myitems' className='text-decoration-none text-dark d-flex align-items-center px-2 mx-auto'>My-Items</Link></li>
+           <li><Link to='/dashboard' className='text-decoration-none text-dark d-flex align-items-center px-2 mx-auto'>Dash-Board</Link></li>
+           {/* <li><Link to='/additems' className='text-decoration-none text-dark d-flex align-items-center px-2 mx-auto'>Add-Items</Link></li>
+           <li><Link to='/myitems' className='text-decoration-none text-dark d-flex align-items-center px-2 mx-auto'>My-Items</Link></li> */}
          </div>:<li><Link to='/login' className='text-decoration-none text-dark d-flex align-items-center px-2 mx-auto'>Sign-In</Link></li>
         
          }
@@ -64,9 +62,9 @@ const Navbar = () => {
    
     </ul>
   </div>
-  {/* <div className="navbar-end">
-    <a className="btn">Get started</a>
-  </div> */}
+  
+  <label for="my-drawer-2" class="btn btn-primary drawer-button lg:hidden">Open-dashboard</label>
+
 </div>
 
         </div>

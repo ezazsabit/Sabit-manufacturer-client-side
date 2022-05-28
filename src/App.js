@@ -9,6 +9,10 @@ import Footer from './shared components/Footer';
 import Signup from '../src/Authentication/Signup'
 import Login from './Authentication/Login';
 import RequireAuth from './shared components/RequireAuth';
+import Dashboard from './Dashboard/Dashboard';
+import AddaReview from './Dashboard/AddaReview';
+import Myorder from './Dashboard/Myorder';
+import Myprofile from './Dashboard/Myprofile';
 
 function App() {
   return (
@@ -23,6 +27,11 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/purchase/:id" element={<RequireAuth><Purchace /></RequireAuth>} />
         <Route path="/purchase" element={<RequireAuth><Purchace /></RequireAuth>} />
+        <Route path="/dashboard" element={<RequireAuth><Dashboard /></RequireAuth>} >
+          <Route path='/dashboard/order' element={<Myorder></Myorder>}></Route>
+          <Route path='/dashboard/profile' element={<Myprofile></Myprofile>}></Route>
+          <Route path='/dashboard/review' element={<AddaReview></AddaReview>}></Route>
+        </Route>
      </Routes>
       <Footer></Footer>
      
