@@ -8,7 +8,7 @@ const Dashboard = () => {
                 <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
                 <div class="drawer-content ">
                     {/* <!-- Page content here --> */}
-                    <p className='mt-5 text-3xl font-bold text-secondary'>Dashboard!!</p>
+                    {/* <p className='mt-5 text-3xl font-bold text-secondary'>Dashboard!!</p> */}
                     <Outlet></Outlet>
                     {/* <label for="my-drawer-2" class="btn btn-primary drawer-button lg:hidden">Open drawer</label> */}
                     {/* we will use it in another section */}

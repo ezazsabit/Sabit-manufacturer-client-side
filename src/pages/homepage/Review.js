@@ -56,12 +56,7 @@ const Review = () => {
                 </div>
             </div>
            
-          <div className=" w-4/5 mx-20 mt-8 mb-8">
-          <p className="text-primary mr-5 text-lg">Comment box:</p>
-            <textarea placeholder='Your comment' className=' w-4/5 border border-black h-16'  name="" id="" cols="30" rows="10"></textarea><br />
-            <button class="ml-5 btn btn-primary">Comment</button>
-
-          </div>
+          
          
            
         </div>

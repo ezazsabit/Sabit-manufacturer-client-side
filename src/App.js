@@ -13,6 +13,7 @@ import Dashboard from './Dashboard/Dashboard';
 import AddaReview from './Dashboard/AddaReview';
 import Myorder from './Dashboard/Myorder';
 import Myprofile from './Dashboard/Myprofile';
+import Review from './pages/homepage/Review';
 
 function App() {
   return (
@@ -25,6 +26,8 @@ function App() {
         
         <Route path="/register" element={<Signup />} />
         <Route path="/login" element={<Login />} />
+        {/* <Route path="/review" element={<Review />} /> */}
+
         <Route path="/purchase/:id" element={<RequireAuth><Purchace /></RequireAuth>} />
         <Route path="/purchase" element={<RequireAuth><Purchace /></RequireAuth>} />
         <Route path="/dashboard" element={<RequireAuth><Dashboard /></RequireAuth>} >
