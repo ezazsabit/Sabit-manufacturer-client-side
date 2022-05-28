@@ -14,6 +14,8 @@ import AddaReview from './Dashboard/AddaReview';
 import Myorder from './Dashboard/Myorder';
 import Myprofile from './Dashboard/Myprofile';
 import Review from './pages/homepage/Review';
+import Blog from './pages/Blogs/Blog';
+import Portfolio from './pages/Portfolio';
 
 function App() {
   return (
@@ -26,7 +28,8 @@ function App() {
         
         <Route path="/register" element={<Signup />} />
         <Route path="/login" element={<Login />} />
-        {/* <Route path="/review" element={<Review />} /> */}
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/myportfolio" element={<Portfolio />} />
 
         <Route path="/purchase/:id" element={<RequireAuth><Purchace /></RequireAuth>} />
         <Route path="/purchase" element={<RequireAuth><Purchace /></RequireAuth>} />

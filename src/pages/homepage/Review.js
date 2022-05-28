@@ -1,6 +1,12 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 const Review = () => {
+  const [data, setData] = useState([]);
+  useEffect(() => {
+    fetch(`http://localhost:5000/review`)
+      .then((res) => res.json())
+      .then((data) => setData(data));
+  }, [data]);
     return (
         <div>
             <p className='mt-5 text-6xl text-secondary'>Our Reviews!!</p>
@@ -55,6 +61,27 @@ const Review = () => {
                    
                 </div>
             </div>
+            {
+              data.map(a=>
+                <div className='max-w-80 mx-20 flex items-center ' >
+                <div class="mt-5 avatar">
+                    <div class="max-w-24 max-h-24   rounded-full ring ring-primary ring-offset-base-100 mr-5">
+                        <img src="https://api.lorem.space/image/face?hash=3184" />
+                   
+                
+                    
+                
+                    </div>
+                  <div className='text-left h-24 lg:w-96   my-5'>
+                  <p><span className="text-secondary">Name:</span> {a.email.slice(0,3)}</p>
+                  <p><span className="text-secondary">Ratings:</span>{a.ratings}</p>
+                    <p><span className="text-secondary">Comment:</span>{a.review}</p>
+                  </div>
+                   
+                </div>
+            </div>
+                )
+            }
            
           
          

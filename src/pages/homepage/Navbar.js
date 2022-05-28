@@ -25,6 +25,8 @@ const Navbar = () => {
       <ul tabindex="0" className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
       {/* <label for="drop" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label> */}
         <li> <Link to='/home' className='text-decoration-none text-dark d-flex align-items-center px-2 mx-auto'>Home</Link></li>
+        <li> <Link to='/blog' className='text-decoration-none text-dark d-flex align-items-center px-2 mx-auto'>Blog</Link></li>
+        <li> <Link to='/myportfolio' className='text-decoration-none text-dark d-flex align-items-center px-2 mx-auto'>My-Portfolio</Link></li>
         {/* <li tabindex="0">
           <a className="justify-between">
             Parent
@@ -48,6 +50,8 @@ const Navbar = () => {
   <div className="navbar-end hidden lg:flex">
     <ul className="menu menu-horizontal p-0">
       <li> <Link to='/home' className='text-decoration-none text-dark d-flex align-items-center px-2 mx-auto'>Home</Link></li>
+      <li> <Link to='/blog' className='text-decoration-none text-dark d-flex align-items-center px-2 mx-auto'>Blog</Link></li>
+      <li> <Link to='/myportfolio' className='text-decoration-none text-dark d-flex align-items-center px-2 mx-auto'>My-Portfolio</Link></li>
       {
            user? <div className='flex '>
            <li><p className='logOut my-auto text-primary signout' onClick={logout}>Log-Out:{user?.displayName || user?.email}</p></li>

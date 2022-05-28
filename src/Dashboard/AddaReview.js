@@ -44,7 +44,7 @@ const AddaReview = () => {
             <form onSubmit={addReviewHandle} action="">
                 <div className=" w-4/5 mx-20 mt-8 mb-8">
 
-                    <p>Your Ratings:<input type="number" required placeholder='ratings' name="" id="" /></p>
+                    <p>Your Ratings:<input type="text" required placeholder='ratings' name="" id="" /></p>
                     <p className='text-red-600 text-sm'>provide a value from 0 to 5</p>
                     <p className="text-primary mr-5 text-lg">Review box:</p>
                     <textarea placeholder='Your comment' className=' w-4/5 border border-black h-16' name="" id="" cols="30" rows="10"></textarea><br />
