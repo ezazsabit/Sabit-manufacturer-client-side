@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 
 const Item = ({ToolItem}) => {
   const{_id}=ToolItem
-    console.log(ToolItem.picture);
+    // console.log(ToolItem.picture);
     const navigate=useNavigate()
     const routedPath=()=>{
       navigate(`/purchase/${_id}`)
