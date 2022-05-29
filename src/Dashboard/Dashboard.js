@@ -1,7 +1,10 @@
 import React from 'react';
 import { Link, Outlet } from 'react-router-dom';
+import useAdmin from '../CustomHooks/useAdmin';
 
 const Dashboard = () => {
+    const admin = useAdmin()
+    console.log(admin)
     return (
         <div>
             <div class="drawer drawer-mobile">
@@ -18,10 +21,24 @@ const Dashboard = () => {
                     <label for="my-drawer-2" class="drawer-overlay"></label>
                     <ul class="menu p-4 overflow-y-auto w-80 bg-base-100 text-base-content">
                         {/* <!-- Sidebar content here --> */}
-                        <li><Link to='/dashboard/order'>My Order</Link></li>
+                        {
+                            admin ?
+                                <>
+                                    <li><Link to='/dashboard/ManageAllOrders'>Manage All Orders</Link></li>
+                                    <li><Link to='/dashboard/AddAProduct'>Add A Product</Link></li>
+                                    <li><Link to='/dashboard/MakeAdmin'>Make Admin</Link></li>
+                                    <li><Link to='/dashboard/ManageProducts'>Manage Products</Link></li>
+                                </>
+                                :
+                                <>
+                                    <li><Link to='/dashboard/order'>My Order</Link></li>
+
+                                    <li><Link to='/dashboard/review'>Add a Review</Link></li>
+                                </>
+                        }
+
                         <li><Link to='/dashboard/profile'>My Profile</Link></li>
-                        <li><Link to='/dashboard/review'>Add a Review</Link></li>
-                   
+
                     </ul>
 
                 </div>

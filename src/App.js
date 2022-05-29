@@ -16,16 +16,20 @@ import Myprofile from './Dashboard/Myprofile';
 import Review from './pages/homepage/Review';
 import Blog from './pages/Blogs/Blog';
 import Portfolio from './pages/Portfolio';
+import ManageAllOrder from './Dashboard/ManageAllOrder';
+import AddAProduct from './Dashboard/AddAProduct'
+import MakeAdmin from './Dashboard/MakeAdmin';
+import ManageProducts from './Dashboard/ManageProducts';
 
 function App() {
   return (
     <div className="App">
       <Navbar></Navbar>
-     <Routes>
-     <Route path="/" element={<Home />} />
+      <Routes>
+        <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
         <Route path="/*" element={<Error />} />
-        
+
         <Route path="/register" element={<Signup />} />
         <Route path="/login" element={<Login />} />
         <Route path="/blog" element={<Blog />} />
@@ -37,10 +41,14 @@ function App() {
           <Route path='/dashboard/order' element={<Myorder></Myorder>}></Route>
           <Route path='/dashboard/profile' element={<Myprofile></Myprofile>}></Route>
           <Route path='/dashboard/review' element={<AddaReview></AddaReview>}></Route>
+          <Route path='/dashboard/ManageAllOrders' element={<ManageAllOrder></ManageAllOrder>}></Route>
+          <Route path='/dashboard/AddAProduct' element={<AddAProduct></AddAProduct>}></Route>
+          <Route path='/dashboard/MakeAdmin' element={<MakeAdmin></MakeAdmin>}></Route>
+          <Route path='/dashboard/ManageProducts' element={<ManageProducts></ManageProducts>}></Route>
         </Route>
-     </Routes>
+      </Routes>
       <Footer></Footer>
-     
+
     </div>
   );
 }
