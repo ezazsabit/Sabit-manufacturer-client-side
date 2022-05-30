@@ -8,7 +8,7 @@ const Myprofile = () => {
     const [myuser, setMyuser] = useState({})
 
     useEffect(() => {
-        fetch(`http://localhost:5000/user?email=${user.email}`)
+        fetch(`https://intense-brook-81804.herokuapp.com/user?email=${user.email}`)
             .then(res => res.json())
             .then(data => setMyuser(data))
     }, [myuser])
@@ -19,7 +19,7 @@ const Myprofile = () => {
     const onSubmit = data => {
         // data = { ...user.email }
         console.log(data)
-        fetch(`http://localhost:5000/user?email=${user.email}`, {
+        fetch(`https://intense-brook-81804.herokuapp.com/user?email=${user.email}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
